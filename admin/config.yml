@@ -27,17 +27,26 @@ collections: # A list of collections the CMS should be able to edit
         name: "content"
         file: "_data/content.yml"
         fields:
-          - name: header
-            label: Header
-            widget: code
-      - label: "Navigation 2"
-        name: "navigation-2"
-        file: "_data/navigation.yml"
-        fields:
-          - label: "Navigation Items"
-            name: "items"
-            widget: "code"
-            
+          - name: "header"
+            label: "Header"
+            widget: "object"
+            fields:
+              - name: "headline"
+              - name: "sub-headline"
+              - name: "placeholder"
+              - name: "btn-txt"
+              - name: "section-content"
+                widget: "object"
+                fields:  
+                  - name: "paragraphs"
+                    widget: "list"
+              - name: "sub-sections"
+                widget: "list"
+                fields:
+                  - name: "section-title"
+                  - name: "section-content"
+                    required: false
+          
   # POSTS
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
