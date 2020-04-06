@@ -1,7 +1,9 @@
 ---
 layout: page
 page-title: 
+permalink: /join
 title: Entra a far parte di NOME PROGETTO
+subtitle: 
 ---
 
 Rimani aggiornato sugli sviluppi di NOME PROGETTO e scopri quante donazioni hanno generato i tuoi acquisti.

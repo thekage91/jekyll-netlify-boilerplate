@@ -1,6 +1,9 @@
 ---
 layout: page
+page-title: 
 title: Tieni Greenshares sempre vicino a te
+subtitle: 
+permalink: /aggiungi-greenshares-ai-preferiti
 ---
 Stiamo lavorando senza sosta per rendere GreenShares più semplice e piacevole da usare e sempre vicino a te.
 

@@ -3,6 +3,7 @@ layout: page
 page-title: 
 title: "PRIVACY & COOKIE POLICY"
 subtitle: "Informativa sul trattamento dei dati personali (art. 13 Reg. UE 2016/679, GDPR)"
+permalink: /privacy-policy
 ---
 
 ## PREMESSA
