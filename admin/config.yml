@@ -13,6 +13,16 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: false
     files:
+      - label: "Navigation"
+        name: "navigation"
+        file: "_data/navigation.yml"
+        fields:
+          - label: "Navigation Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Link, name: link, widget: string}
       - label: "Content"
         name: "content"
         file: "_data/content.yml"
@@ -23,16 +33,6 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - { name: body, label: Body, widget: code }
           - { name: header, label: Header, widget: code }
-  - label: "Navigation"
-    name: "navigation"
-    file: "_data/navigation.yml"
-    fields:
-      - label: "Navigation Items"
-        name: "items"
-        widget: "list"
-        fields:
-          - {label: Name, name: name, widget: string}
-          - {label: Link, name: link, widget: string}
   # POSTS
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
@@ -65,3 +65,4 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Permalink", name: "permalink", widget: "hidden"}
       - {label: "Section", name: "section", widget: "hidden", default: "{{name}}"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
