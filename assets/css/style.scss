@@ -1,0 +1,252 @@
+---
+---
+
+@import "variables";
+
+.bg-dark-green {
+  background-color: $dark-green;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  color: $dark-green;
+}
+
+h2 {
+  font-weight: $secondary-font-weight;
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px 10px 30px;
+
+  &.btn-primary {
+    background-color: $dark-green;
+    box-shadow: inset 0px 0px 10px rgba($color: black, $alpha: 0.2);
+  }
+
+  &.btn-success {
+    background-color: $dark-green;
+  }
+}
+
+a {
+  color: $dark-green;
+  text-decoration: underline;
+  font-weight: normal;
+
+  &.btn {
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $dark-green;
+  }
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  border-top: 5px solid $soft-green;
+}
+
+nav {
+  background-color: $dark-green;
+  box-shadow: 0px 2px 10px $dark-green;
+}
+
+section {
+  margin-top: 80px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .section-title {
+    margin-bottom: 20px;
+    color: $dark-green;
+    font-weight: $secondary-font-weight;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 10%;
+      padding-top: 10px;
+      border-bottom: 4px solid $soft-green;
+    }
+  }
+}
+
+.page,
+.post {
+  h2,
+  h3,
+  h4 {
+    margin-top: 40px;
+  }
+
+  h2:after,
+  h3:after {
+    content: "";
+    display: block;
+    width: 10%;
+    padding-top: 10px;
+    border-bottom: 4px solid $soft-green;
+  }
+}
+
+mark {
+  font-weight: 500;
+  background-color: $light-yellow;
+}
+
+.container-fluid {
+  padding: 0px;
+}
+
+header {
+  &#header .hero {
+    min-height: 300px;
+  }
+
+  .hero {
+    min-height: 200px;
+    background-color: $dark-green;
+    color: $light-green;
+    padding-top: 60px;
+    text-align: center;
+  }
+
+  h1 {
+    color: white;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .jumbotron {
+    min-height: 100px;
+    background-color: white;
+    //box-shadow: 0px 0px 10px $light-green;
+    margin-top: -80px;
+    padding: 50px 50px 20px 50px;
+    border: 1px solid $light-green;
+
+    p {
+      text-align: left;
+      font-size: 15px;
+    }
+  }
+
+  .input-group {
+    padding: 10px;
+    border-radius: 5px;
+    background: $light-green;
+
+    input {
+      background: transparent;
+      border: none;
+
+      &:focus {
+        box-shadow: none;
+        background: transparent;
+      }
+    }
+
+    button {
+      border-radius: 5px !important;
+    }
+  }
+
+  .charity-campaign {
+    box-shadow: 0px 0px 20px $light-green;
+
+    img.campaign-logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 568px) {
+    .jumbotron {
+      margin-top: 0px;
+      padding: 20px 20px;
+
+      .form-control {
+        padding: 30px;
+        background-color: $light-green;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.media-image {
+  p {
+    color: $dark-green;
+    font-size: 30px;
+    font-weight: 800;
+  }
+}
+
+#how-it-works {
+  .media {
+    border: 2px solid $soft-green;
+    box-shadow: inset 0px 0px 10px rgba($color: $soft-green, $alpha: 0.4);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    //color: $dark-green;
+
+    .media-title {
+      font-style: italic;
+    }
+
+    .media-content {
+      font-weight: 300;
+    }
+  }
+}
+
+#team {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: white;
+  .section-title {
+    color: white;
+  }
+
+  .card {
+    background-color: transparent;
+
+    img {
+      border-radius: 20px;
+    }
+
+    .card-title {
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .card-body {
+      background-color: transparent;
+      font-weight: 300;
+    }
+  }
+}
+
+#call-to-action {
+  .jumbotron {
+    background-color: transparent;
+  }
+}
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: $dark-green;
+  font-size: 12px;
+  background-color: rgba($color: $light-green, $alpha: 0.3);
+}

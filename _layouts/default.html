@@ -1,24 +1,19 @@
----
-layout: compress
----
-
 <!DOCTYPE html>
-<html data-current="{{ page.section }}" lang="en">
-
+<html>
   {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <main>
-
-      {{ content }}
-
-    </main>
-
-    {% include footer.html %}
-
+  <body id="page-top" class="index">
+    {% include google-tag-manager-body.html %}
+    {% include nav.html %}
+    <div class="container-fluid">
+      {% include header.html %} 
+      {% include how-it-works.html %}
+      {% include what-is.html %}
+      {% include target.html %}
+      {% include charity.html %}
+      {% include team.html %}
+      {% include call-to-action.html %}
+      {% include footer.html %} 
+      {% include js.html %}
+    </div>
   </body>
-
 </html>

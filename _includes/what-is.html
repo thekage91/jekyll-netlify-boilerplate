@@ -1,0 +1,12 @@
+<span id=""></span>
+<section id="what-is">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-sm-12 col-md-6">
+        <h2 class="section-title">{{ site.data.content.what-is.section-title }}</h2>
+        {% for paragraph in site.data.content.what-is.section-content.paragraphs %}
+          <p>{{ paragraph }}</p>
+        {% endfor %}
+    </div>
+  </div>
+</section>

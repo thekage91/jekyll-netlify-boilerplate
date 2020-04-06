@@ -1,11 +1,73 @@
-<header>
-
-  <h1>
-    <a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-  </h1>
-
-  <nav>
-    {% include navigation.html navigation=site.data.navigation %}
-  </nav>
+<!-- Header -->
+<header id="header">
+  <div class="row">
+    <div class="col-12">
+      <div class="hero">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-sm-12 col-md-8">
+            <h1>{{ site.data.content.header.headline }}</h1>
+            <p class="lead">
+              {{ site.data.content.header.sub-headline }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-sm-12 col-lg-6">
+      <div class="jumbotron text-center">
+        <form
+          name="link-generator"
+          class="d-none d-md-block"
+          onsubmit="return false;"
+        >
+          <div class="input-group">
+            <input
+              type="text"
+              name="amazon-link"
+              class="form-control"
+              placeholder="{{ site.data.content.header.placeholder }}"
+              aria-label=""
+              aria-describedby="basic-addon2"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-primary">
+                {{ site.data.content.header.btn-txt }}
+              </button>
+            </div>
+          </div>
+        </form>
+        <form name="link-generator" class="d-block d-sm-none d-md-none">
+          <div class="form-group">
+            <input
+              type="text"
+              name="amazon-link"
+              class="form-control"
+              placeholder="{{ site.data.content.header.placeholder }}"
+              aria-label=""
+              aria-describedby="basic-addon2"
+            />
+          </div>
+          <button class="btn btn-primary">
+            {{ site.data.content.header.btn-txt }}
+          </button>
+        </form>
+        <br />
+        <p>
+          {{ site.data.content.header.sub-sections[0].section-title }}
+        </p>
+        <p class="text-left">
+          {{
+          site.data.content.header.sub-sections[0].section-content.paragraphs[0]
+          }}
+        </p>
+      </div>
+    </div>
+  </div>
+  {% include charity-campaign.html %}
 
 </header>
+

@@ -1,0 +1,43 @@
+{% assign data = site.data.how-it-works %}
+
+<span id="come-funziona"></span>
+<section id="how-it-works">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-sm-12 col-md-6">
+      <div class="row">
+        <div class="col-12">
+            <h2 class="section-title">{{ site.data.content.how-it-works.section-title }}</h2>
+            {% for paragraph in site.data.content.how-it-works.section-content.paragraphs %}
+              <p>{{ paragraph }}</p>
+            {% endfor %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h3 class="section-title">{{ site.data.content.how-it-works.sub-sections[0].section-title }}</h3>
+          {% for step in site.data.content.how-it-works.sub-sections[0].section-content.paragraphs %} 
+            <div class="media">
+              <div class="media-image mr-3">
+                <p>{{ forloop.index }}.</p>
+              </div>
+              <div class="media-body">
+                <p class="media-title mt-0">{{ step }}</p>
+                <!--<p class="media-content">{{ step }}</p>-->
+              </div>
+            </div>
+          {% endfor %}
+          <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h3 class="section-title">{{ site.data.content.how-it-works.sub-sections[1].section-title }}</h3>
+          {% for paragraph in site.data.content.how-it-works.sub-sections[1].section-content.paragraphs %}
+            <p>{{ paragraph }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
