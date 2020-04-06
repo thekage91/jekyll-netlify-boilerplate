@@ -26,16 +26,12 @@ collections: # A list of collections the CMS should be able to edit
       - label: "Content"
         name: "content"
         file: "_data/content.yml"
-        extension: "yml"
-        format: "YAML"
-        editor:
-          preview: false
         fields:
           - name: header
             label: Header
             widget: code
       - label: "Navigation 2"
-        name: "navigation"
+        name: "navigation-2"
         file: "_data/navigation.yml"
         fields:
           - label: "Navigation Items"
