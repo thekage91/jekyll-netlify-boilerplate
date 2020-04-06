@@ -1,10 +1,10 @@
-# specify main menu items here
-
-- text: Home
-  url: /
-- text: About
-  url: /about
-- text: Contact
-  url: /contact
-- text: Blog
-  url: /blog
+# _data/navigation.yml
+items:
+  - name: Home
+    link: /
+  - name: About
+    link: /about.html
+  - name: Blog
+    link: /blog.html
+  - name: Staff
+    link: /staff.html

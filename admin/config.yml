@@ -1,16 +1,37 @@
 # Everything you need to know about configuring the CMS can be found here:-
 # https://www.netlifycms.org/docs/configuration-options/
-
 backend:
-  name: github
-  repo: thekage91/jekyll-netlify-boilerplate # your GitHub username and repository name, separated by a slash
-  branch: master # optional, default value is "master"
+  name: git-gateway # Netlify’s Git Gateway connects to Git provider’s API
+  branch: master # Branch to update (master by default)
 
 media_folder: "assets/img/uploads" # Folder where user uploaded files should go
 
-publish_mode: editorial_workflow # Enable drafts
+publish_mode:x   editorial_workflow # Enable drafts
 
 collections: # A list of collections the CMS should be able to edit
+  - name: "config"
+    label: "Config"
+    editor:
+      preview: false
+    files:
+      - label: "Navigation"
+        name: "navigation"
+        file: "_data/navigation.yml"
+        fields:
+          - label: "Navigation Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Link, name: link, widget: string}
+      - label: "Content"
+        name: "content"
+        file: "_data/content.yml"
+        fields:
+          - label: "Header"
+            name: "header"
+            widget: "code"
+            
   # POSTS
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
