@@ -25,6 +25,9 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Link, name: link, widget: string}
       - label: "Content"
         name: "content"
+        editor:
+          preview: false
+        delete: false
         file: "_data/content.yml"
         fields:
           - name: "header"
