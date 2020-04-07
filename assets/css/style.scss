@@ -7,6 +7,10 @@
   background-color: $dark-green;
 }
 
+.display-6 {
+  font-size: 25px;
+}
+
 h2,
 h3,
 h4,
@@ -16,6 +20,14 @@ h5 {
 
 h2 {
   font-weight: $secondary-font-weight;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 10%;
+    padding-top: 10px;
+    border-bottom: 4px solid $soft-green;
+  }
 }
 
 .btn {

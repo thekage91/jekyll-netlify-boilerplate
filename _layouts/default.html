@@ -2,17 +2,18 @@
 <html>
   {% include head.html %}
   <body id="page-top" class="index">
-    {% include google-tag-manager-body.html %}
-    {% include nav.html %}
+    {% include google-tag-manager-body.html %} {% include nav.html %}
     <div class="container-fluid">
       {% include header.html %} 
-      {% include how-it-works.html %}
-      {% include what-is.html %}
-      {% include target.html %}
-      {% include charity.html %}
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-sm-12 col-md-6">
+          {{ content }}
+        </div>
+      </div>
       {% include team.html %}
-      {{ content }} 
       {% include call-to-action.html %}
+
       {% include footer.html %} 
       {% include js.html %}
     </div>

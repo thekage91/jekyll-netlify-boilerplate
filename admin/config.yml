@@ -30,25 +30,21 @@ collections: # A list of collections the CMS should be able to edit
         delete: false
         file: "_data/content.yml"
         fields:
-          - name: "header"
-            label: "Header"
+          - name: "charity-campaign"
+            label: "charity-campaign"
             widget: "object"
             fields:
-              - name: "headline"
-              - name: "sub-headline"
-              - name: "placeholder"
-              - name: "btn-txt"
-              - name: "section-content"
-                widget: "object"
-                fields:  
-                  - name: "paragraphs"
-                    widget: "list"
-              - name: "sub-sections"
-                widget: "list"
-                fields:
-                  - name: "section-title"
-                  - name: "section-content"
-                    required: false
+              - name: "logo"
+                widget: "image"
+                required: true
+              - name: "image"
+                widget: "image"
+                required: true
+              - name: "title"
+                required: true
+              - name: "content"
+              - name: "link"
+              - name: call-to-action
           
   # POSTS
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -71,6 +67,23 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Categories", name: "categories", widget: "string", required: false}
     # PAGES
+  - name: "Home"
+    label: "Home"
+    files:
+      - label: Home
+        name: "Home"
+        file: "pages/index.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+          - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+          - {label: "Permalink", name: "permalink", widget: "hidden"}
+          - {label: "Headline", name: "headline", widget: "string", required: false}
+          - {label: "Subheadline", name: "subheadline", widget: "string", required: false}
+          - {label: "Placeholder", name: "placeholder", widget: "string", required: false}
+          - {label: "Call to action", name: "call-to-action", widget: "string", required: false}
+          - {label: "Sub-call to action", name: "sub-call-to-action", widget: "string", required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
   - name: "page"
     label: "Page"
     folder: "pages"
@@ -83,3 +96,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Permalink", name: "permalink", widget: "hidden"}
       - {label: "Section", name: "section", widget: "hidden", default: "{{name}}"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
+      - {label: "Headline", name: "headline", widget: "markdown", required: false}
+      - {label: "Subheadline", name: "subheadline", widget: "markdown", required: false}
+      - {label: "Placeholder", name: "placeholder", widget: "markdown", required: false}
+      - {label: "Call to action", name: "call-to-action", widget: "markdown", required: false}

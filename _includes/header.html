@@ -6,9 +6,9 @@
         <div class="row">
           <div class="col-md-2"></div>
           <div class="col-sm-12 col-md-8">
-            <h1>{{ site.data.content.header.headline }}</h1>
+            <h1>{{ page.headline }}</h1>
             <p class="lead">
-              {{ site.data.content.header.sub-headline }}
+              {{ page.subheadline }}
             </p>
           </div>
         </div>
@@ -29,13 +29,13 @@
               type="text"
               name="amazon-link"
               class="form-control"
-              placeholder="{{ site.data.content.header.placeholder }}"
+              placeholder="{{ page.placeholder }}"
               aria-label=""
               aria-describedby="basic-addon2"
             />
             <div class="input-group-append">
               <button class="btn btn-primary">
-                {{ site.data.content.header.btn-txt }}
+                {{ page.call-to-action }}
               </button>
             </div>
           </div>
@@ -46,28 +46,22 @@
               type="text"
               name="amazon-link"
               class="form-control"
-              placeholder="{{ site.data.content.header.placeholder }}"
+              placeholder="{{ page.placeholder }}"
               aria-label=""
               aria-describedby="basic-addon2"
             />
           </div>
           <button class="btn btn-primary">
-            {{ site.data.content.header.btn-txt }}
+            {{ page.call-to-action }}
           </button>
         </form>
         <br />
         <p>
-          {{ site.data.content.header.sub-sections[0].section-title }}
-        </p>
-        <p class="text-left">
-          {{
-          site.data.content.header.sub-sections[0].section-content.paragraphs[0]
-          }}
+          {{ page.sub-call-to-action }}
         </p>
       </div>
     </div>
   </div>
   {% include charity-campaign.html %}
-
 </header>
 
